@@ -84,7 +84,6 @@ async function handleChatSubmit(e) {
     }
 }
 
-// Enviar Lead do Chat
 async function submitLeadData() {
     const name = document.getElementById('chat-name').value;
     const phone = document.getElementById('chat-phone').value;
@@ -328,6 +327,45 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => { setCookie('agil_lead_enviado', 'true', 24); if(formHeader) formHeader.style.display = 'none'; if(progressContainer) progressContainer.style.display = 'none'; form.style.display = 'none'; successDiv.classList.remove('hidden'); }, 1500);
         }
     });
+
+    // AUTO-SCROLL DEPOIMENTOS (Versão Infinito Perfeito)
+    const testimonialTrack = document.getElementById('testimonial-track');
+    if (testimonialTrack) {
+        // 1. Duplicar os cards para criar o efeito infinito visual
+        const cards = Array.from(testimonialTrack.children);
+        cards.forEach(card => {
+            const clone = card.cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true'); // Ignorar clones na leitura de tela
+            testimonialTrack.appendChild(clone);
+        });
+
+        const scrollStep = 1; // Velocidade
+        const delay = 30;     // Suavidade
+        let isPaused = false; // Controle de pausa
+
+        const autoScroll = setInterval(() => {
+            if (!isPaused) {
+                testimonialTrack.scrollLeft += scrollStep;
+
+                // A MÁGICA: Se rolou metade (chegou no fim dos originais),
+                // volta pro zero instantaneamente. O usuário não percebe.
+                // Usamos >= (scrollWidth / 2) porque dobramos o conteúdo.
+                if (testimonialTrack.scrollLeft >= (testimonialTrack.scrollWidth / 2)) {
+                    testimonialTrack.scrollLeft = 0;
+                }
+            }
+        }, delay);
+
+        // PAUSA: Quando o mouse entra ou toca na tela
+        testimonialTrack.addEventListener('mouseenter', () => { isPaused = true; });
+        testimonialTrack.addEventListener('touchstart', () => { isPaused = true; });
+
+        // VOLTA: Quando o mouse sai ou solta o dedo
+        testimonialTrack.addEventListener('mouseleave', () => { isPaused = false; });
+        testimonialTrack.addEventListener('touchend', () => {
+            setTimeout(() => { isPaused = false; }, 2000);
+        });
+    }
 });
 
 function acceptEssential() { setCookie('agil_consentimento', 'essential', 365 * 24); closeBanner(); }
