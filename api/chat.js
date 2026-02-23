@@ -5,13 +5,11 @@ export default async function handler(request, response) {
     response.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
     response.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
 
-    // Responde rápido se for verificação do navegador
     if (request.method === 'OPTIONS') {
         response.status(200).end();
         return;
     }
 
-    // 2. Pega a mensagem enviada pelo site
     const { message } = request.body;
 
     if (!message) {
@@ -19,16 +17,15 @@ export default async function handler(request, response) {
     }
 
     try {
-        // 3. Pega a chave segura do ambiente da Vercel
         const apiKey = process.env.GEMINI_API_KEY;
 
         if (!apiKey) {
-            throw new Error('Chave da API não configurada no Vercel');
+            console.error("ERRO: Chave GEMINI_API_KEY não encontrada!");
+            return response.status(500).json({ reply: "Erro de configuração no servidor." });
         }
 
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
-        // 4. O Prompt do Sistema fica AQUI (Seguro no backend)
         const systemPrompt = `
         Você é o Consultor Virtual da Ágil Solar.
         Persona: Profissional, amigável e especialista em energia fotovoltaica.
@@ -50,7 +47,6 @@ export default async function handler(request, response) {
             }]
         };
 
-        // 5. Chama o Google
         const googleResponse = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -58,13 +54,28 @@ export default async function handler(request, response) {
         });
 
         const data = await googleResponse.json();
-        const botReply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Desculpe, não entendi.";
 
-        // 6. Devolve a resposta para o seu site
+        // TRATAMENTO INTELIGENTE DE ERROS:
+        if (!googleResponse.ok) {
+            // Se for o erro 429 (Limite de requisições)
+            if (googleResponse.status === 429) {
+                console.warn("Aviso: Limite de uso do Google atingido (429).");
+                return response.status(200).json({
+                    reply: "Estou a processar muitos pedidos neste momento! ☀️ Podes tentar enviar a tua mensagem novamente daqui a 1 minuto?"
+                });
+            }
+
+            // Outros erros da API
+            console.error("ERRO DA API DO GOOGLE:", JSON.stringify(data, null, 2));
+            return response.status(200).json({ reply: "Ocorreu um erro técnico na nossa comunicação. Por favor, tenta novamente mais tarde." });
+        }
+
+        // Sucesso!
+        const botReply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Desculpe, não entendi.";
         response.status(200).json({ reply: botReply });
 
     } catch (error) {
-        console.error("Erro na API:", error);
+        console.error("ERRO GERAL NO SERVIDOR:", error);
         response.status(500).json({ error: 'Erro interno no servidor' });
     }
 }
