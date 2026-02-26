@@ -46,6 +46,18 @@ body::before {
 .radio-card:checked + div span { color: #050A30; font-weight: 700; }
 .dark .radio-card:checked + div span { color: #FFFFFF; }
 
+/* ESTILOS NOVOS PARA O KIT (Calculadora) */
+.radio-card-kit:checked + div {
+    border-color: #FF6B00 !important;
+    background-color: rgba(255, 107, 0, 0.05) !important;
+    box-shadow: 0 0 0 2px #FF6B00 !important;
+}
+
+.bg-gold-gradient {
+    background: linear-gradient(135deg, #FFB800 0%, #FF6B00 100%);
+}
+/* FIM ESTILOS NOVOS */
+
 /* Accordion FAQ Fix */
 .faq-content {
     transition: max-height 0.4s cubic-bezier(0, 1, 0, 1), opacity 0.4s ease-out;
@@ -88,6 +100,20 @@ body::before {
     display: none;
 }
 .no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+/* Scrollbar Fina e Elegante */
+.scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 163, 175, 0.5); /* Cor cinza suave */
+    border-radius: 20px;
+}
+.dark .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
 }

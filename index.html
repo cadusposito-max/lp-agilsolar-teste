@@ -4,28 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO & Meta Tags -->
     <meta name="description" content="Reduza sua conta de luz em até 85% com a Ágil Solar. Energia fotovoltaica com engenharia de precisão e garantia de 25 anos. Simule sua economia agora!">
     <meta name="keywords" content="energia solar, fotovoltaica, economia de energia, painel solar, ágil solar">
     <meta name="author" content="Ágil Solar Franchising">
 
     <title>Ágil Solar - Energia Inteligente</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- Configuração de Cores, Fontes e Animações -->
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -39,6 +34,7 @@
                             surface: '#F8FAFC',
                             darkBg: '#020617',
                             darkCard: '#0F172A',
+                            whatsapp: '#25D366',
                         }
                     },
                     fontFamily: {
@@ -91,7 +87,6 @@
             }
         }
     </script>
-
 </head>
 <body class="font-sans antialiased selection:bg-brand-orange selection:text-white overflow-x-hidden bg-brand-surface dark:bg-brand-darkBg text-brand-deepBlue dark:text-gray-100 transition-colors duration-500">
 
@@ -155,81 +150,343 @@
     </div>
 </nav>
 
-<!-- HERO SECTION -->
-<header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-surface dark:bg-brand-darkBg transition-colors duration-500">
+<header class="relative pt-64 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-surface dark:bg-brand-darkBg transition-colors duration-500">
     <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-orange/10 dark:bg-brand-orange/5 rounded-full blur-[120px] dark:blur-[150px] -translate-y-1/2 translate-x-1/3 z-0 pointer-events-none transition-all duration-500 animate-float-slow"></div>
     <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/5 dark:bg-blue-600/5 rounded-full blur-[100px] dark:blur-[120px] translate-y-1/3 -translate-x-1/4 z-0 pointer-events-none transition-all duration-500"></div>
     <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)] pointer-events-none opacity-50 dark:opacity-20 transition-opacity"></div>
 
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-7 text-center lg:text-left space-y-8 reveal active">
+        <div class="grid lg:grid-cols-12 gap-12 items-start" id="hero-grid">
+
+            <div id="hero-text-col" class="lg:col-span-7 text-center lg:text-left space-y-8 reveal active transition-all duration-500 opacity-100">
                 <div class="inline-flex items-center gap-3 mb-2 group cursor-default justify-center lg:justify-start">
                     <span class="flex h-3 w-3 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-brand-orange"></span></span>
-                    <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-xs md:text-sm border-b-2 border-transparent group-hover:border-brand-orange transition-all duration-300">Nova Era da Energia</span>
+                    <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-xs md:text-sm border-b-2 border-transparent group-hover:border-brand-orange transition-all duration-300">Direto da Distribuidora</span>
                 </div>
-                <h1 class="font-display text-5xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-brand-deepBlue dark:text-white transition-colors duration-500">Pague mais barato na sua<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-red-500 dark:to-yellow-400">conta de energia.</span></h1>
-                <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed transition-colors duration-500">A liberdade que você sempre quis. Produza sua própria energia com tecnologia premium e use seu salário para o que realmente importa: você e sua família.</p>
+                <h1 class="font-display text-3xl lg:text-5xl font-extrabold leading-[1.1] tracking-tight text-brand-deepBlue dark:text-white transition-colors duration-500">Monte o seu kit de energia solar, pelo<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-red-500 dark:to-yellow-400">melhor preço do Brasil.</span></h1>
+                <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed transition-colors duration-500">Equipamentos premium entregues diretamente na sua casa ou obra. Contrate o instalador da sua confiança e, se precisar, nós cuidamos de toda a burocracia do projeto (homologação) para você.</p>
                 <div class="flex flex-wrap gap-8 justify-center lg:justify-start pt-6 border-t border-gray-200 dark:border-white/10 transition-colors">
-                    <div class="reveal delay-100"><p class="text-3xl font-display font-bold text-brand-deepBlue dark:text-white transition-colors">85%</p><p class="text-xs uppercase tracking-wider text-gray-400 dark:text-gray-500 font-bold">Economia Média</p></div>
-                    <div class="reveal delay-200"><p class="text-3xl font-display font-bold text-brand-deepBlue dark:text-white transition-colors">25+<span class="text-brand-orange text-lg ml-1">anos</span></p><p class="text-xs uppercase tracking-wider text-gray-400 dark:text-gray-500 font-bold">Garantia Performance</p></div>
-                    <div class="reveal delay-300"><p class="text-3xl font-display font-bold text-brand-deepBlue dark:text-white transition-colors">placas<span class="text-brand-orange ml-1">PREMIUM</span></p><p class="text-xs uppercase tracking-wider text-gray-400 dark:text-gray-500 font-bold">Tecnologia de ponta e alta durabilidade</p></div>
+                    <div class="reveal delay-100"><p class="text-3xl font-display font-bold text-brand-deepBlue dark:text-white transition-colors">Kits<span class="text-brand-orange ml-1 text-lg">Prontos</span></p><p class="text-xs uppercase tracking-wider text-gray-400 dark:text-gray-500 font-bold">Sem intermediários</p></div>
+                    <div class="reveal delay-200"><p class="text-3xl font-display font-bold text-brand-deepBlue dark:text-white transition-colors">Projeto<span class="text-brand-orange text-lg ml-1">Opcional</span></p><p class="text-xs uppercase tracking-wider text-gray-400 dark:text-gray-500 font-bold">Aprovação na concessionária</p></div>
+                    <div class="reveal delay-300"><p class="text-3xl font-display font-bold text-brand-deepBlue dark:text-white transition-colors">25+<span class="text-brand-orange ml-1 text-lg">anos</span></p><p class="text-xs uppercase tracking-wider text-gray-400 dark:text-gray-500 font-bold">Garantia de Fábrica</p></div>
                 </div>
             </div>
 
-            <div class="lg:col-span-5 relative reveal delay-500" id="lead-form-container">
+            <div id="hero-form-col" class="lg:col-span-5 relative reveal delay-500 transition-all duration-700 ease-in-out">
                 <div class="absolute inset-0 bg-gradient-to-tr from-brand-orange to-purple-500 dark:to-purple-600 rounded-[2.5rem] blur-2xl opacity-20 dark:opacity-30 transform rotate-3 scale-105 animate-pulse-glow transition-all duration-500"></div>
-                <div class="relative glass-panel rounded-[2rem] p-6 lg:p-8 shadow-2xl transition-all hover:scale-[1.01] duration-500">
-                    <div class="text-center mb-6 form-header">
-                        <div class="w-14 h-14 bg-brand-orange/10 dark:bg-brand-orange/20 text-brand-orange rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 border border-transparent dark:border-brand-orange/30 shadow-none dark:shadow-[0_0_15px_rgba(255,107,0,0.2)]"><i class="fas fa-calculator"></i></div>
-                        <h3 class="font-display text-2xl font-bold text-brand-deepBlue dark:text-white transition-colors">Simulador de Economia</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1 transition-colors">Inteligência Artificial aplicada ao seu telhado.</p>
+                <div id="lead-form-container" class="relative glass-panel rounded-[2rem] p-6 lg:p-8 shadow-2xl transition-all duration-500 bg-white/80 dark:bg-slate-900/80">
+
+                    <div id="main-form-header" class="flex flex-col text-center mb-6 transition-all duration-500">
+                        <div id="main-header-icon-container" class="w-14 h-14 bg-brand-orange/10 dark:bg-brand-orange/20 text-brand-orange rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 border border-transparent dark:border-brand-orange/30 shadow-none dark:shadow-[0_0_15px_rgba(255,107,0,0.2)] shrink-0 transition-all duration-500">
+                            <i class="fas fa-calculator" id="header-icon"></i>
+                        </div>
+                        <div class="transition-all duration-500">
+                            <h3 class="font-display text-2xl font-bold text-brand-deepBlue dark:text-white transition-colors leading-tight" id="header-title">Monte Seu Kit</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1 transition-colors" id="header-subtitle">Passo a passo para a sua economia.</p>
+                        </div>
                     </div>
-                    <div class="h-1 w-full bg-gray-100 dark:bg-gray-700 rounded-full mb-6 progress-container overflow-hidden"><div id="progress-bar" class="h-full bg-brand-orange rounded-full shadow-[0_0_10px_rgba(255,107,0,0.5)] dark:shadow-[0_0_10px_#FF6B00] transition-all duration-500" style="width: 50%"></div></div>
-                    <form id="contact-form" onsubmit="return false;">
-                        <div id="step1" class="space-y-6">
-                            <div class="grid grid-cols-2 gap-3">
-                                <label class="cursor-pointer group relative active:scale-95 transition-transform"><input type="radio" name="imovel_type" value="Residencial" class="peer sr-only radio-card" onchange="updateSelect('type', 'Residencial')"><div class="h-28 rounded-2xl border border-gray-100 bg-white shadow-sm dark:border-white/10 dark:bg-white/5 flex flex-col items-center justify-center gap-3 transition-all duration-200 hover:shadow-md dark:hover:bg-white/10 dark:hover:border-brand-orange/40"><i class="fas fa-home text-2xl text-gray-300 dark:text-gray-400 transition-colors"></i><span class="text-sm font-medium text-gray-500 dark:text-gray-400 transition-colors">Casa</span></div></label>
-                                <label class="cursor-pointer group relative active:scale-95 transition-transform"><input type="radio" name="imovel_type" value="Comercial" class="peer sr-only radio-card" onchange="updateSelect('type', 'Comercial')"><div class="h-28 rounded-2xl border border-gray-100 bg-white shadow-sm dark:border-white/10 dark:bg-white/5 flex flex-col items-center justify-center gap-3 transition-all duration-200 hover:shadow-md dark:hover:bg-white/10 dark:hover:border-brand-orange/40"><i class="fas fa-building text-2xl text-gray-300 dark:text-gray-400 transition-colors"></i><span class="text-sm font-medium text-gray-500 dark:text-gray-400 transition-colors">Empresa</span></div></label>
-                                <label class="cursor-pointer group relative active:scale-95 transition-transform"><input type="radio" name="imovel_type" value="Rural" class="peer sr-only radio-card" onchange="updateSelect('type', 'Rural')"><div class="h-28 rounded-2xl border border-gray-100 bg-white shadow-sm dark:border-white/10 dark:bg-white/5 flex flex-col items-center justify-center gap-3 transition-all duration-200 hover:shadow-md dark:hover:bg-white/10 dark:hover:border-brand-orange/40"><i class="fas fa-tractor text-2xl text-gray-300 dark:text-gray-400 transition-colors"></i><span class="text-sm font-medium text-gray-500 dark:text-gray-400 transition-colors">Rural</span></div></label>
-                                <label class="cursor-pointer group relative active:scale-95 transition-transform"><input type="radio" name="imovel_type" value="Usina" class="peer sr-only radio-card" onchange="updateSelect('type', 'Usina')"><div class="h-28 rounded-2xl border border-gray-100 bg-white shadow-sm dark:border-white/10 dark:bg-white/5 flex flex-col items-center justify-center gap-3 transition-all duration-200 hover:shadow-md dark:hover:bg-white/10 dark:hover:border-brand-orange/40"><i class="fas fa-dollar text-2xl text-gray-300 dark:text-gray-400 transition-colors"></i><span class="text-sm font-medium text-gray-500 dark:text-gray-400 transition-colors">Investimento</span></div></label>
+
+                    <div class="h-1.5 w-full bg-gray-100 dark:bg-gray-700 rounded-full mb-6 progress-container overflow-hidden">
+                        <div id="progress-bar" class="h-full bg-brand-orange rounded-full shadow-[0_0_10px_rgba(255,107,0,0.5)] dark:shadow-[0_0_10px_#FF6B00] transition-all duration-500" style="width: 25%"></div>
+                    </div>
+
+                    <form id="calculator-form" onsubmit="return false;">
+
+                        <div id="step1" class="space-y-5">
+                            <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-2">
+
+                                <label class="cursor-pointer group relative active:scale-95 transition-transform">
+                                    <input type="radio" name="imovel_type" value="Residencial" class="peer sr-only radio-card" onchange="updateSelect('type', 'Residencial')">
+                                    <div class="rounded-xl border border-gray-100 bg-white shadow-sm dark:border-white/10 dark:bg-white/5
+                    flex flex-col lg:flex-row items-center justify-center
+                    h-24 lg:h-14 lg:px-1 gap-2
+                    transition-all duration-200 hover:shadow-md dark:hover:bg-white/10 dark:hover:border-brand-orange/40
+                    peer-checked:border-brand-orange peer-checked:bg-orange-50 dark:peer-checked:bg-slate-800">
+                                        <i class="fas fa-home text-2xl lg:text-base text-gray-300 dark:text-gray-400 transition-colors group-hover:text-brand-orange peer-checked:text-brand-orange"></i>
+                                        <span class="text-sm lg:text-xs font-bold text-gray-500 dark:text-gray-400 transition-colors group-hover:text-brand-deepBlue dark:group-hover:text-white peer-checked:text-brand-deepBlue dark:peer-checked:text-white">Casa</span>
+                                    </div>
+                                </label>
+
+                                <label class="cursor-pointer group relative active:scale-95 transition-transform">
+                                    <input type="radio" name="imovel_type" value="Comercial" class="peer sr-only radio-card" onchange="updateSelect('type', 'Comercial')">
+                                    <div class="rounded-xl border border-gray-100 bg-white shadow-sm dark:border-white/10 dark:bg-white/5
+                    flex flex-col lg:flex-row items-center justify-center
+                    h-24 lg:h-14 lg:px-1 gap-2
+                    transition-all duration-200 hover:shadow-md dark:hover:bg-white/10 dark:hover:border-brand-orange/40
+                    peer-checked:border-brand-orange peer-checked:bg-orange-50 dark:peer-checked:bg-slate-800">
+                                        <i class="fas fa-building text-2xl lg:text-base text-gray-300 dark:text-gray-400 transition-colors group-hover:text-brand-orange peer-checked:text-brand-orange"></i>
+                                        <span class="text-sm lg:text-xs font-bold text-gray-500 dark:text-gray-400 transition-colors group-hover:text-brand-deepBlue dark:group-hover:text-white peer-checked:text-brand-deepBlue dark:peer-checked:text-white">Empresa</span>
+                                    </div>
+                                </label>
+
+                                <label class="cursor-pointer group relative active:scale-95 transition-transform">
+                                    <input type="radio" name="imovel_type" value="Rural" class="peer sr-only radio-card" onchange="updateSelect('type', 'Rural')">
+                                    <div class="rounded-xl border border-gray-100 bg-white shadow-sm dark:border-white/10 dark:bg-white/5
+                    flex flex-col lg:flex-row items-center justify-center
+                    h-24 lg:h-14 lg:px-1 gap-2
+                    transition-all duration-200 hover:shadow-md dark:hover:bg-white/10 dark:hover:border-brand-orange/40
+                    peer-checked:border-brand-orange peer-checked:bg-orange-50 dark:peer-checked:bg-slate-800">
+                                        <i class="fas fa-tractor text-2xl lg:text-base text-gray-300 dark:text-gray-400 transition-colors group-hover:text-brand-orange peer-checked:text-brand-orange"></i>
+                                        <span class="text-sm lg:text-xs font-bold text-gray-500 dark:text-gray-400 transition-colors group-hover:text-brand-deepBlue dark:group-hover:text-white peer-checked:text-brand-deepBlue dark:peer-checked:text-white">Rural</span>
+                                    </div>
+                                </label>
+
+                                <label class="cursor-pointer group relative active:scale-95 transition-transform">
+                                    <input type="radio" name="imovel_type" value="Usina" class="peer sr-only radio-card" onchange="updateSelect('type', 'Usina')">
+                                    <div class="rounded-xl border border-gray-100 bg-white shadow-sm dark:border-white/10 dark:bg-white/5
+                    flex flex-col lg:flex-row items-center justify-center
+                    h-24 lg:h-14 lg:px-1 gap-2
+                    transition-all duration-200 hover:shadow-md dark:hover:bg-white/10 dark:hover:border-brand-orange/40
+                    peer-checked:border-brand-orange peer-checked:bg-orange-50 dark:peer-checked:bg-slate-800">
+                                        <i class="fas fa-dollar-sign text-2xl lg:text-base text-gray-300 dark:text-gray-400 transition-colors group-hover:text-brand-orange peer-checked:text-brand-orange"></i>
+                                        <span class="text-sm lg:text-xs font-bold text-gray-500 dark:text-gray-400 transition-colors group-hover:text-brand-deepBlue dark:group-hover:text-white peer-checked:text-brand-deepBlue dark:peer-checked:text-white">Investimento</span>
+                                    </div>
+                                </label>
                             </div>
-                            <select id="type" class="hidden"><option value=""></option></select>
+                            <input type="hidden" id="type" value="">
+
+                            <div class="flex p-1 bg-gray-100 dark:bg-slate-800 rounded-xl mb-2">
+                                <button type="button" onclick="setCalcMode('consumo')" id="tab-consumo" class="flex-1 py-2 text-sm font-bold bg-white dark:bg-slate-700 shadow-sm rounded-lg text-brand-orange transition-all">Por Consumo</button>
+                                <button type="button" onclick="setCalcMode('modulos')" id="tab-modulos" class="flex-1 py-2 text-sm font-bold text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 rounded-lg transition-all">Por Módulos</button>
+                            </div>
+
+                            <div id="input-consumo-container" class="relative">
+                                <div class="flex justify-between items-end mb-2 px-1">
+                                    <label class="text-sm font-bold text-gray-600 dark:text-gray-300">Média de Consumo (kWh)</label>
+                                    <button type="button" onclick="openBillInfoModal()" class="text-xs text-brand-orange hover:underline flex items-center gap-1 font-bold"><i class="fas fa-info-circle"></i> Onde encontro?</button>
+                                </div>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                        <i class="fas fa-bolt text-brand-orange"></i>
+                                    </div>
+                                    <input type="number" id="consumption-val" placeholder="Ex: 450" class="w-full bg-white border border-gray-200 text-brand-deepBlue dark:bg-white/5 dark:border-white/10 dark:text-white font-bold py-4 px-4 pl-12 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-orange/20 dark:focus:ring-brand-orange/40 focus:border-brand-orange transition-all shadow-sm placeholder-gray-400">
+                                    <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-400 text-sm font-bold">kWh</div>
+                                </div>
+                            </div>
+
+                            <div id="input-modulos-container" class="hidden relative">
+                                <div class="flex justify-between items-end mb-2 px-1">
+                                    <label class="text-sm font-bold text-gray-600 dark:text-gray-300">Quantidade de Placas</label>
+                                </div>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                        <i class="fas fa-solar-panel text-brand-orange"></i>
+                                    </div>
+                                    <input type="number" id="modules-count" placeholder="Ex: 12" class="w-full bg-white border border-gray-200 text-brand-deepBlue dark:bg-white/5 dark:border-white/10 dark:text-white font-bold py-4 px-4 pl-12 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-orange/20 dark:focus:ring-brand-orange/40 focus:border-brand-orange transition-all shadow-sm placeholder-gray-400">
+                                    <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-400 text-sm font-bold">Placas</div>
+                                </div>
+                            </div>
+
                             <div class="relative">
-                                <select id="consumption" class="w-full bg-white border border-gray-200 text-brand-deepBlue dark:bg-white/5 dark:border-white/10 dark:text-white font-bold py-4 px-4 pl-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-orange/20 dark:focus:ring-brand-orange/40 focus:border-brand-orange appearance-none cursor-pointer transition-all shadow-sm">
-                                    <option value="" disabled selected class="text-gray-400 dark:bg-slate-800">Quanto você paga de luz?</option>
-                                    <option value="Ate 300" class="dark:bg-slate-800 text-brand-deepBlue dark:text-white">Até R$ 300,00</option>
-                                    <option value="300 a 600" class="dark:bg-slate-800 text-brand-deepBlue dark:text-white">R$ 300 a R$ 600</option>
-                                    <option value="600 a 1000" class="dark:bg-slate-800 text-brand-deepBlue dark:text-white">R$ 600 a R$ 1.000</option>
-                                    <option value="Acima de 1000" class="dark:bg-slate-800 text-brand-deepBlue dark:text-white">Mais de R$ 1.000</option>
+                                <select id="roof-type" class="w-full bg-white border border-gray-200 text-brand-deepBlue dark:bg-slate-800 dark:border-white/10 dark:text-white font-bold py-4 px-4 pl-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-orange/20 dark:focus:ring-brand-orange/40 focus:border-brand-orange transition-all shadow-sm appearance-none cursor-pointer">
+                                    <option value="" disabled selected class="text-gray-400">Qual o tipo de telhado?</option>
+                                    <option value="Cerâmico">Telhado Cerâmico / Colonial</option>
+                                    <option value="Metálico">Telhado Metálico / Zinco</option>
+                                    <option value="Fibrocimento">Telhado de Fibrocimento / Eternit</option>
+                                    <option value="Laje/Solo">Laje Planejada ou Solo</option>
+                                    <option value="Sem Estrutura">Vou comprar sem estrutura de fixação</option>
                                 </select>
                                 <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-brand-orange"><i class="fas fa-chevron-down text-sm"></i></div>
                             </div>
-                            <button type="button" id="btn-next-1" class="w-full bg-brand-deepBlue hover:bg-black text-white dark:bg-white dark:text-brand-darkBg dark:hover:bg-gray-200 font-bold py-4 rounded-xl shadow-lg hover:shadow-xl dark:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all transform hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3 group btn-shine">Calcular Economia <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform text-brand-orange"></i></button>
+
+                            <p id="error-msg-1" class="text-red-500 text-sm font-bold hidden text-center"></p>
+
+                            <button type="button" id="btn-next-1" class="w-full bg-brand-deepBlue hover:bg-black text-white dark:bg-white dark:text-brand-darkBg dark:hover:bg-gray-200 font-bold py-4 rounded-xl shadow-lg hover:shadow-xl dark:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all transform hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3 group btn-shine">
+                                Escolher Equipamentos <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform text-brand-orange"></i>
+                            </button>
                         </div>
-                        <div id="step2" class="hidden space-y-4 animate-fade-in">
+
+                        <div id="step-lead" class="hidden space-y-5 animate-fade-in">
+                            <div class="text-center mb-6">
+                                <div class="w-16 h-16 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange text-2xl mx-auto mb-3">
+                                    <i class="fas fa-user-check"></i>
+                                </div>
+                                <h3 class="font-display text-2xl font-bold text-brand-deepBlue dark:text-white">Para quem é o projeto?</h3>
+                                <p class="text-gray-500 dark:text-gray-400">Precisamos calcular a irradiação solar exata da sua cidade.</p>
+                            </div>
+
                             <div class="space-y-4">
-                                <input type="text" id="name" placeholder="Seu nome completo" class="w-full bg-white border border-gray-200 text-brand-deepBlue dark:bg-slate-800/50 dark:border-white/10 dark:text-white rounded-xl px-4 py-3.5 font-medium outline-none focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 transition-all placeholder-gray-400 dark:placeholder-gray-500">
-                                <input type="tel" id="phone" placeholder="WhatsApp (com DDD)" class="w-full bg-white border border-gray-200 text-brand-deepBlue dark:bg-slate-800/50 dark:border-white/10 dark:text-white rounded-xl px-4 py-3.5 font-medium outline-none focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 transition-all placeholder-gray-400 dark:placeholder-gray-500">
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Seu Nome Completo</label>
+                                    <input type="text" id="lead-name" placeholder="Ex: Cadu Silva" class="w-full bg-white border border-gray-200 dark:bg-slate-800 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-orange outline-none dark:text-white font-bold">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">WhatsApp</label>
+                                    <input type="tel" id="lead-phone" placeholder="(DDD) 99999-9999" class="w-full bg-white border border-gray-200 dark:bg-slate-800 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-orange outline-none dark:text-white font-bold">
+                                </div>
+
                                 <div class="grid grid-cols-3 gap-3">
-                                    <input type="text" id="city" placeholder="Cidade" class="col-span-2 w-full bg-white border border-gray-200 text-brand-deepBlue dark:bg-slate-800/50 dark:border-white/10 dark:text-white rounded-xl px-4 py-3.5 font-medium outline-none focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 transition-all placeholder-gray-400 dark:placeholder-gray-500">
-                                    <div class="relative">
-                                        <select id="state" class="w-full bg-white border border-gray-200 text-brand-deepBlue dark:bg-slate-800/50 dark:border-white/10 dark:text-white rounded-xl px-2 py-3.5 font-medium outline-none focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 transition-all appearance-none text-center">
-                                            <option value="" disabled selected class="dark:bg-slate-800">UF</option><option value="SP" class="dark:bg-slate-800">SP</option><option value="MG" class="dark:bg-slate-800">MG</option>
+                                    <div class="col-span-2">
+                                        <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Cidade</label>
+
+                                        <select id="lead-city-select" onchange="toggleCustomCity()" class="w-full bg-white border border-gray-200 dark:bg-slate-800 dark:border-white/10 rounded-xl px-4 py-3 outline-none dark:text-white font-bold transition-all">
+                                            <option value="" disabled selected>Carregando...</option>
+                                        </select>
+
+                                        <div id="custom-city-div" class="hidden mt-2 animate-fade-in">
+                                            <input type="text" id="lead-city-input" placeholder="Digite o nome da cidade" class="w-full bg-gray-50 border border-brand-orange/30 dark:bg-slate-900/50 dark:border-brand-orange/30 rounded-xl px-4 py-3 outline-none dark:text-white font-bold text-sm focus:ring-2 focus:ring-brand-orange">
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">UF</label>
+                                        <select id="lead-state" class="w-full bg-white border border-gray-200 dark:bg-slate-800 dark:border-white/10 rounded-xl px-4 py-3 outline-none dark:text-white font-bold">
+                                            <option value="AC">AC</option>
+                                            <option value="AL">AL</option>
+                                            <option value="AP">AP</option>
+                                            <option value="AM">AM</option>
+                                            <option value="BA">BA</option>
+                                            <option value="CE">CE</option>
+                                            <option value="DF">DF</option>
+                                            <option value="ES">ES</option>
+                                            <option value="GO">GO</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MT">MT</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MG">MG</option>
+                                            <option value="PA">PA</option>
+                                            <option value="PB">PB</option>
+                                            <option value="PR">PR</option>
+                                            <option value="PE">PE</option>
+                                            <option value="PI">PI</option>
+                                            <option value="RJ">RJ</option>
+                                            <option value="RN">RN</option>
+                                            <option value="RS">RS</option>
+                                            <option value="RO">RO</option>
+                                            <option value="RR">RR</option>
+                                            <option value="SC">SC</option>
+                                            <option value="SP" selected>SP</option>
+                                            <option value="SE">SE</option>
+                                            <option value="TO">TO</option>
                                         </select>
                                     </div>
                                 </div>
+
+                            <button type="button" onclick="submitLeadStep()" id="btn-submit-lead" class="w-full bg-brand-whatsapp hover:bg-green-600 text-white font-bold py-4 rounded-xl shadow-lg transition-all transform active:scale-95 flex items-center justify-center gap-2 mt-4">
+                                Ver Equipamentos <i class="fas fa-lock"></i>
+                            </button>
+
+                            <p class="text-[10px] text-center text-gray-400 mt-2"><i class="fas fa-shield-alt"></i> Seus dados estão seguros e não faremos spam.</p>
+                        </div>
+
+                        </div> <div id="step2" class="hidden space-y-4">
+                            <div class="flex justify-between items-end mb-4">
+                                <h4 class="font-bold text-brand-deepBlue dark:text-white text-lg">Selecione o Painel (Módulo)</h4>
+                                <span class="text-xs text-gray-500 bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Passo 2/4</span>
                             </div>
-                            <button type="submit" id="submit-btn" class="w-full bg-brand-orange hover:bg-orange-600 text-white font-bold py-4 rounded-xl shadow-lg dark:shadow-[0_0_20px_rgba(255,107,0,0.4)] transition-all transform hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2 btn-shine">Receber Estudo Grátis</button>
-                            <button type="button" id="btn-prev-2" class="w-full text-xs text-gray-400 hover:text-brand-deepBlue dark:hover:text-white py-2 font-semibold"><i class="fas fa-arrow-left mr-1"></i> Voltar</button>
-                            <p class="text-[10px] text-center text-gray-400 dark:text-gray-500 mt-0 flex items-center justify-center gap-1"><i class="fas fa-lock"></i> Seus dados estão 100% criptografados</p>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="modulos-list">
+                            </div>
+
+                            <div class="pt-4 flex gap-3">
+                                <button type="button" onclick="goToStep(1)" class="w-14 h-14 rounded-xl border border-gray-200 dark:border-white/10 flex items-center justify-center text-gray-500 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"><i class="fas fa-arrow-left"></i></button>
+                                <button type="button" id="btn-next-2" disabled class="flex-1 bg-brand-orange text-white font-bold rounded-xl shadow-lg hover:bg-orange-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2">
+                                    Escolher Inversor <i class="fas fa-chevron-right text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="step3" class="hidden space-y-4 animate-fade-in">
+                            <div class="flex justify-between items-end mb-2">
+                                <h4 class="font-bold text-brand-deepBlue dark:text-white text-lg">Selecione o Inversor</h4>
+                                <span class="text-xs text-gray-500 bg-gray-100 dark:bg-white/10 px-2 py-1 rounded">Passo 3/4</span>
+                            </div>
+                            <div class="bg-blue-50 dark:bg-blue-500/10 border border-blue-100 dark:border-blue-500/20 rounded-lg p-3 text-sm text-blue-800 dark:text-blue-300 flex gap-3 items-center mb-4">
+                                <i class="fas fa-info-circle text-xl"></i>
+                                <p>Com base em <strong id="calc-modulos-text">X</strong> módulos, recomendamos as potências abaixo.</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="inversores-list">
+                            </div>
+
+                            <div class="pt-4 flex gap-3">
+                                <button type="button" onclick="goToStep(2)" class="w-14 h-14 rounded-xl border border-gray-200 dark:border-white/10 flex items-center justify-center text-gray-500 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"><i class="fas fa-arrow-left"></i></button>
+                                <button type="button" id="btn-next-3" disabled class="flex-1 bg-brand-deepBlue text-white dark:bg-white dark:text-brand-darkBg font-bold rounded-xl shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2 btn-shine">
+                                    Ver Resumo do Kit <i class="fas fa-check-circle text-brand-orange"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="step4" class="hidden animate-fade-in pb-4">
+                            <div class="bg-white dark:bg-[#0f172a] border border-gray-200 dark:border-white/10 rounded-[2rem] overflow-hidden shadow-2xl relative">
+                                <div class="grid grid-cols-1 lg:grid-cols-12">
+
+                                    <div class="lg:col-span-5 relative bg-gradient-to-br from-gray-100 to-gray-200 dark:from-slate-800 dark:to-slate-900 flex flex-col justify-between h-96 lg:h-auto">
+                                        <div class="relative w-full h-full flex items-start justify-center p-0 overflow-hidden">
+                                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-orange/20 rounded-full blur-3xl pointer-events-none"></div>
+                                            <img id="resumo-image" src="" class="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal relative z-10 drop-shadow-2xl hover:scale-110 scale-[1.3] translate-y-5 transition-transform duration-700" style="object-position: center top;" alt="Módulo Solar">
+                                        </div>
+
+                                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent flex flex-col justify-end p-6 lg:p-8 z-20">
+                                            <div class="text-white transform translate-y-0 lg:translate-y-2">
+                                                <p class="text-xs font-bold text-brand-orange uppercase tracking-wider mb-1 flex items-center gap-2"><i class="fas fa-bolt"></i> Seu Sistema Ideal</p>
+                                                <h3 class="font-display text-3xl lg:text-4xl font-extrabold tracking-tight mb-2 leading-none" id="resumo-titulo">Kit Solar</h3>
+                                                <p class="text-sm text-gray-300 opacity-90">Produção de energia otimizada para o seu perfil.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="lg:col-span-7 p-6 lg:p-10 flex flex-col bg-white dark:bg-[#0f172a]">
+                                        <div class="mb-8 relative mt-4 lg:mt-0">
+                                            <div class="relative z-10">
+                                                <div class="flex items-center gap-3 mb-1">
+                                                    <p class="text-sm font-semibold text-gray-400 line-through decoration-red-500/50 decoration-2" id="preco-original">R$ 0,00</p>
+
+                                                    <div id="badge-economia" class="bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-400 text-[10px] md:text-xs font-bold px-2 py-0.5 rounded border border-green-200 dark:border-green-500/30 flex items-center gap-1">
+                                                        <i class="fas fa-tag"></i> Desconto
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-1">
+                                                    <span class="text-4xl md:text-6xl font-extrabold text-brand-orange drop-shadow-sm tracking-tight" id="preco-desconto">R$ 0,00</span>
+                                                    <span class="text-gray-500 dark:text-gray-400 font-bold text-sm md:text-base">à vista</span>
+                                                </div>
+
+                                                <div class="flex flex-col gap-2 mb-5 mt-3 bg-gray-50 dark:bg-white/5 p-3 rounded-xl border border-gray-100 dark:border-white/10 w-fit">
+                                                    <div class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
+                                                        <i class="fas fa-credit-card text-brand-deepBlue dark:text-white w-5 text-center"></i>
+                                                        <span>Ou <strong class="text-brand-deepBlue dark:text-white" id="preco-parcelado">12x de R$ 0,00</strong> no cartão</span>
+                                                    </div>
+                                                    <div class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
+                                                        <i class="fas fa-landmark text-brand-deepBlue dark:text-white w-5 text-center"></i>
+                                                        <span>Financiamento solar em até <strong class="text-brand-deepBlue dark:text-white">84x</strong></span>
+                                                    </div>
+                                                </div>
+                                                <div class="inline-flex items-center gap-2 bg-green-50 dark:bg-green-500/10 border border-green-200 dark:border-green-500/20 text-green-700 dark:text-green-400 px-3 py-1.5 rounded-lg text-xs font-bold mt-2">
+                                                    <i class="fas fa-check-circle"></i> Melhor custo-benefício garantido
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex-1 border-t border-gray-100 dark:border-white/10 pt-6 lg:pt-8">
+                                            <h4 class="text-xs font-bold text-gray-500 dark:text-gray-400 mb-4 uppercase tracking-widest flex items-center gap-2">
+                                                O que acompanha o kit
+                                            </h4>
+                                            <div class="space-y-3 max-h-[350px] overflow-y-auto pr-2 scrollbar-thin" id="kit-components">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="text-[10px] text-center text-gray-500 dark:text-gray-400 mt-6 mb-4 flex items-center justify-center gap-2 px-4">
+                                <i class="fas fa-shield-alt text-brand-orange"></i> Valor estimado sujeito a análise técnica. Válido por 48 horas.
+                            </p>
+
+                            <div class="flex gap-3 mt-2 px-1">
+                                <button type="button" onclick="goToStep(3)" class="w-14 h-14 rounded-2xl border-2 border-gray-200 dark:border-white/10 flex items-center justify-center text-gray-500 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-brand-orange hover:border-brand-orange transition-all shrink-0"><i class="fas fa-arrow-left"></i></button>
+
+                                <button type="button" onclick="sendToWhatsApp()" class="flex-1 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold rounded-2xl shadow-lg shadow-[#25D366]/30 transition-all transform hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2 text-base md:text-lg btn-shine">
+                                    <i class="fab fa-whatsapp text-xl"></i> Finalizar Pedido
+                                </button>
+                            </div>
+
+                            <p class="text-[11px] text-center text-gray-500 dark:text-gray-400 mt-4 mb-2 flex items-center justify-center gap-2 px-4">
+                                <i class="fas fa-lock text-brand-orange"></i> Você não paga nada agora. O clique apenas envia o projeto para análise.
+                            </p>
                         </div>
                     </form>
-                    <div id="success-message" class="hidden text-center py-12 animate-fade-in">
-                        <div class="w-20 h-20 bg-green-100 text-green-500 dark:bg-green-500/10 dark:text-green-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg dark:shadow-[0_0_20px_rgba(34,197,94,0.3)] dark:border dark:border-green-500/30"><i class="fas fa-check text-3xl"></i></div>
-                        <h3 class="text-2xl font-bold text-brand-deepBlue dark:text-white">Solicitação Recebida!</h3>
-                        <p class="text-gray-500 dark:text-gray-400 mt-2 leading-relaxed text-sm">Nossa equipe de engenharia já está calculando seu projeto. Fique de olho no seu WhatsApp!</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -240,30 +497,34 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-20 reveal">
             <span class="text-brand-orange font-bold text-xs tracking-[0.2em] uppercase mb-3 block">Processo Simplificado</span>
-            <h2 class="font-display text-3xl md:text-4xl font-bold text-brand-deepBlue dark:text-white transition-colors">Do Projeto à Economia</h2>
-            <p class="text-gray-500 dark:text-gray-400 mt-4 text-lg">A gente resolve a parte chata. Cuidamos de tudo para você começar a economizar o mais rápido possível.</p>
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-brand-deepBlue dark:text-white transition-colors">Como comprar o seu Kit</h2>
+            <p class="text-gray-500 dark:text-gray-400 mt-4 text-lg">Você simula, compra os equipamentos mais baratos e decide quem vai instalar.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 relative">
             <div class="hidden lg:block absolute top-12 left-0 right-0 h-[2px] border-t-2 border-dashed border-gray-200 dark:border-white/10 -z-10 w-3/4 mx-auto"></div>
+
             <div class="text-center group relative reveal delay-100">
-                <div class="w-24 h-24 mx-auto bg-white border border-brand-orange/20 md:border-gray-100 dark:bg-slate-800 dark:border-white/5 rounded-3xl shadow-sm dark:shadow-lg flex items-center justify-center text-3xl text-brand-orange md:text-gray-300 dark:text-gray-500 mb-6 group-hover:border-brand-orange group-hover:text-brand-orange dark:group-hover:text-brand-orange dark:group-hover:shadow-[0_0_20px_rgba(255,107,0,0.2)] transition-all duration-500 relative z-10 animate-[pulse-glow_4s_infinite] md:animate-none"><i class="fas fa-file-invoice-dollar"></i></div>
-                <h3 class="font-bold text-lg text-brand-deepBlue dark:text-white mb-2 transition-colors">1. Mande sua conta</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400 px-2 leading-relaxed">Mande uma foto da sua conta de luz pra gente ver quanto você gasta hoje.</p>
+                <div class="w-24 h-24 mx-auto bg-white border border-brand-orange/20 md:border-gray-100 dark:bg-slate-800 dark:border-white/5 rounded-3xl shadow-sm dark:shadow-lg flex items-center justify-center text-3xl text-brand-orange md:text-gray-300 mb-6 transition-all duration-500 relative z-10"><i class="fas fa-calculator"></i></div>
+                <h3 class="font-bold text-lg text-brand-deepBlue dark:text-white mb-2">1. Dimensione seu Kit</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 px-2 leading-relaxed">Use nossa calculadora para descobrir o tamanho exato do sistema para o seu consumo.</p>
             </div>
+
             <div class="text-center group relative reveal delay-200">
-                <div class="w-24 h-24 mx-auto bg-white border border-brand-orange/20 md:border-gray-100 dark:bg-slate-800 dark:border-white/5 rounded-3xl shadow-sm dark:shadow-lg flex items-center justify-center text-3xl text-brand-orange md:text-gray-300 dark:text-gray-500 mb-6 group-hover:border-brand-orange group-hover:text-brand-orange dark:group-hover:text-brand-orange dark:group-hover:shadow-[0_0_20px_rgba(255,107,0,0.2)] transition-all duration-500 relative z-10 animate-[pulse-glow_4s_infinite] md:animate-none"><i class="fas fa-drafting-compass"></i></div>
-                <h3 class="font-bold text-lg text-brand-deepBlue dark:text-white mb-2 transition-colors">2. A gente faz o projeto</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400 px-2 leading-relaxed">Calculamos quantas placas você precisa para zerar sua conta.</p>
+                <div class="w-24 h-24 mx-auto bg-white border border-brand-orange/20 md:border-gray-100 dark:bg-slate-800 dark:border-white/5 rounded-3xl shadow-sm dark:shadow-lg flex items-center justify-center text-3xl text-brand-orange md:text-gray-300 mb-6 transition-all duration-500 relative z-10"><i class="fas fa-file-signature"></i></div>
+                <h3 class="font-bold text-lg text-brand-deepBlue dark:text-white mb-2">2. Feche o Pedido</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 px-2 leading-relaxed">Fale com nosso time para aprovar o pagamento e decida se quer incluir nosso projeto de homologação.</p>
             </div>
+
             <div class="text-center group relative reveal delay-300">
-                <div class="w-24 h-24 mx-auto bg-white border border-brand-orange/20 md:border-gray-100 dark:bg-slate-800 dark:border-white/5 rounded-3xl shadow-sm dark:shadow-lg flex items-center justify-center text-3xl text-brand-orange md:text-gray-300 dark:text-gray-500 mb-6 group-hover:border-brand-orange group-hover:text-brand-orange dark:group-hover:text-brand-orange dark:group-hover:shadow-[0_0_20px_rgba(255,107,0,0.2)] transition-all duration-500 relative z-10 animate-[pulse-glow_4s_infinite] md:animate-none"><i class="fas fa-tools"></i></div>
-                <h3 class="font-bold text-lg text-brand-deepBlue dark:text-white mb-2 transition-colors">3. Instalação das placas</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400 px-2 leading-relaxed">Nossa equipe instala tudo rapidinho, sem bagunça e com muito cuidado.</p>
+                <div class="w-24 h-24 mx-auto bg-white border border-brand-orange/20 md:border-gray-100 dark:bg-slate-800 dark:border-white/5 rounded-3xl shadow-sm dark:shadow-lg flex items-center justify-center text-3xl text-brand-orange md:text-gray-300 mb-6 transition-all duration-500 relative z-10"><i class="fas fa-truck-loading"></i></div>
+                <h3 class="font-bold text-lg text-brand-deepBlue dark:text-white mb-2">3. Entrega Rápida</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 px-2 leading-relaxed">Receba as placas, inversores e estrutura na porta da sua casa ou obra com rastreio garantido.</p>
             </div>
+
             <div class="text-center group relative reveal delay-400">
-                <div class="w-24 h-24 mx-auto bg-white border border-green-500/20 md:border-gray-100 dark:bg-slate-800 dark:border-white/5 rounded-3xl shadow-sm dark:shadow-lg flex items-center justify-center text-3xl text-green-500 md:text-gray-300 dark:text-gray-500 mb-6 group-hover:border-green-500 group-hover:text-green-500 dark:group-hover:text-green-500 dark:group-hover:shadow-[0_0_20px_rgba(34,197,94,0.3)] transition-all duration-500 relative z-10 animate-[pulse-glow_4s_infinite] md:animate-none"><i class="fas fa-check-circle"></i></div>
-                <h3 class="font-bold text-lg text-brand-deepBlue dark:text-white mb-2 transition-colors">4. Tudo pronto</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400 px-2 leading-relaxed">A gente resolve a papelada com a companhia de energia e você começa a economizar.</p>
+                <div class="w-24 h-24 mx-auto bg-white border border-green-500/20 md:border-gray-100 dark:bg-slate-800 dark:border-white/5 rounded-3xl shadow-sm dark:shadow-lg flex items-center justify-center text-3xl text-green-500 md:text-gray-300 mb-6 transition-all duration-500 relative z-10"><i class="fas fa-tools"></i></div>
+                <h3 class="font-bold text-lg text-brand-deepBlue dark:text-white mb-2">4. Instalação Livre</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 px-2 leading-relaxed">Contrate o eletricista ou instalador de sua confiança para executar a obra usando os melhores equipamentos.</p>
             </div>
         </div>
     </div>
@@ -272,51 +533,46 @@
 <section id="beneficios" class="py-24 bg-brand-surface dark:bg-brand-darkBg relative overflow-hidden transition-colors duration-500">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-            <h2 class="font-display text-4xl font-extrabold text-brand-deepBlue dark:text-white mb-4 transition-colors">Por que a Ágil?</h2>
-            <p class="text-gray-500 dark:text-gray-400 text-lg">Não é gasto, é investimento. Veja como seu bolso agradece.</p>
+            <h2 class="font-display text-4xl font-extrabold text-brand-deepBlue dark:text-white mb-4 transition-colors">Por que comprar conosco?</h2>
+            <p class="text-gray-500 dark:text-gray-400 text-lg">Compre direto da fonte, pague mais barato e tenha liberdade total na instalação.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
-            <div class="reveal delay-100 md:col-span-2 bg-white dark:bg-slate-900 rounded-[2rem] p-10 shadow-sm dark:shadow-lg border border-gray-200/60 dark:border-white/5 relative overflow-hidden group hover:shadow-xl dark:hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] transition-all duration-300 active:scale-[0.98]">
+        <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 h-auto">
+
+            <div class="reveal delay-100 md:col-span-2 bg-white dark:bg-slate-900 rounded-[2rem] p-8 md:p-10 shadow-sm dark:shadow-lg border border-gray-200/60 dark:border-white/5 relative overflow-hidden group hover:shadow-xl dark:hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] transition-all duration-300 active:scale-[0.98] flex flex-col justify-center">
                 <div class="absolute top-0 right-0 w-64 h-64 bg-brand-orange/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-brand-orange/20 transition-all"></div>
-                <div class="relative z-10 h-full flex flex-col justify-between">
-                    <div>
-                        <div class="w-14 h-14 bg-brand-deepBlue text-white dark:bg-white/5 dark:text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-brand-deepBlue/20 dark:shadow-lg dark:border dark:border-white/10"><i class="fas fa-wallet dark:text-brand-orange"></i></div>
-                        <h3 class="font-display text-3xl font-bold text-brand-deepBlue dark:text-white mb-4 transition-colors">Redução de até 85%</h3>
-                        <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed max-w-md">Diga adeus aos aumentos da concessionária. O dinheiro que você pagava na conta agora fica no seu bolso (ou no caixa da sua empresa).</p>
-                    </div>
-                    <div class="mt-8 flex items-center gap-4 text-sm font-bold text-brand-orange uppercase tracking-wider"><span>Payback Médio: 3 Anos</span><div class="h-px bg-gray-200 dark:bg-white/10 flex-1"></div></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 bg-brand-deepBlue text-white dark:bg-white/5 dark:text-white rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-lg shadow-brand-deepBlue/20 dark:shadow-lg dark:border dark:border-white/10"><i class="fas fa-hand-holding-usd dark:text-brand-orange"></i></div>
+                    <h3 class="font-display text-2xl md:text-3xl font-bold text-brand-deepBlue dark:text-white mb-3 transition-colors">Sem Intermediários</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-base md:text-lg leading-relaxed max-w-2xl">Diga adeus aos orçamentos superfaturados. Fornecemos os kits completos a preço de distribuidora, garantindo que o seu dinheiro renda muito mais.</p>
                 </div>
             </div>
+
             <div class="reveal delay-200 md:row-span-2 relative rounded-[2rem] p-[1px] bg-gradient-to-b from-brand-orange/50 to-transparent group active:scale-[0.98] transition-transform">
-                <div class="bg-brand-deepBlue dark:bg-slate-900 w-full h-full rounded-[2rem] p-8 relative overflow-hidden transition-colors duration-500">
-                    <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:20px_20px] opacity-50"></div>
-                    <div class="relative z-10 h-full flex flex-col">
-                        <div class="flex justify-between items-start mb-6">
-                            <div class="w-12 h-12 bg-gradient-to-br from-brand-orange to-red-500 rounded-xl flex items-center justify-center text-white shadow-lg"><i class="fas fa-shield-alt text-xl"></i></div>
-                            <div class="px-3 py-1 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-orange-500 text-[10px] font-bold uppercase tracking-wider animate-pulse">QUALIDADE TOTAL</div>
+                <div class="bg-brand-deepBlue dark:bg-slate-900 w-full h-full rounded-[2rem] p-8 md:p-10 relative overflow-hidden transition-colors duration-500 flex flex-col justify-center">
+
+                    <i class="fas fa-shield-alt absolute -bottom-10 -right-10 text-[14rem] text-white/5 pointer-events-none -rotate-12 transition-transform group-hover:scale-110"></i>
+
+                    <div class="relative z-10">
+                        <div class="flex flex-col xl:flex-row justify-between items-start xl:items-center mb-8 gap-4">
+                            <div class="w-14 h-14 bg-gradient-to-br from-brand-orange to-red-500 rounded-xl flex items-center justify-center text-white shadow-lg shrink-0"><i class="fas fa-certificate text-2xl"></i></div>
+                            <div class="px-3 py-1 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-orange-500 text-[10px] font-bold uppercase tracking-wider animate-pulse whitespace-nowrap">QUALIDADE TOTAL</div>
                         </div>
-                        <h3 class="font-display text-2xl font-bold text-white mb-2">25 Anos de<br>Garantia</h3>
-                        <p class="text-gray-400 text-sm mb-6">Garantia de funcionamento pela fabricante.</p>
-                        <div class="mt-auto bg-white/5 dark:bg-slate-950/50 rounded-xl p-5 border border-white/10 backdrop-blur-sm flex flex-col gap-4">
-                            <div class="flex items-center gap-3 group/item"><div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center border border-green-500/30 group-hover/item:bg-green-500/30 transition-colors"><i class="fas fa-check text-green-500 text-xs"></i></div><div><p class="text-xs font-bold text-white uppercase tracking-wider">Performance</p><p class="text-[10px] text-gray-400 group-hover/item:text-gray-300 transition-colors">80% eficiência até o 25º ano</p></div></div>
-                            <div class="flex items-center gap-3 group/item"><div class="w-8 h-8 rounded-full bg-brand-orange/20 flex items-center justify-center border border-brand-orange/30 group-hover/item:bg-brand-orange/30 transition-colors"><i class="fas fa-shield-alt text-brand-orange text-xs"></i></div><div><p class="text-xs font-bold text-white uppercase tracking-wider">Produto</p><p class="text-[10px] text-gray-400 group-hover/item:text-gray-300 transition-colors">12 anos contra defeitos</p></div></div>
-                            <div class="flex items-center gap-3 group/item"><div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center border border-blue-500/30 group-hover/item:bg-blue-500/30 transition-colors"><i class="fas fa-headset text-blue-500 text-xs"></i></div><div><p class="text-xs font-bold text-white uppercase tracking-wider">Suporte</p><p class="text-[10px] text-gray-400 group-hover/item:text-gray-300 transition-colors">Assistência técnica vitalícia</p></div></div>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-white/10">
-                            <a href="#lead-form-container" class="text-xs font-bold text-white flex items-center justify-between group-hover:text-brand-orange transition-colors">Ver Detalhes Técnicos <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i></a>
-                        </div>
+                        <h3 class="font-display text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">Garantia de<br>Fábrica</h3>
+                        <p class="text-gray-300 text-base md:text-lg leading-relaxed">Os inversores e placas do seu kit contam com as maiores garantias do mercado (até 25 anos) direto com os fabricantes oficiais.</p>
                     </div>
                 </div>
             </div>
-            <div class="reveal delay-300 bg-white dark:bg-slate-900 rounded-[2rem] p-8 shadow-sm dark:shadow-lg border border-gray-200/60 dark:border-white/5 hover:shadow-lg dark:hover:border-white/20 transition-all duration-300 group active:scale-[0.98]">
-                <i class="fas fa-chart-line text-3xl text-green-500 mb-4 group-hover:scale-110 transition-transform origin-left dark:drop-shadow-[0_0_10px_rgba(34,197,94,0.4)]"></i>
-                <h3 class="font-display text-xl font-bold text-brand-deepBlue dark:text-white mb-2 transition-colors">Valorização Imobiliária</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm">Seu imóvel vale, em média, 8% a mais no momento da instalação.</p>
+
+            <div class="reveal delay-300 bg-white dark:bg-slate-900 rounded-[2rem] p-8 shadow-sm dark:shadow-lg border border-gray-200/60 dark:border-white/5 hover:shadow-lg dark:hover:border-white/20 transition-all duration-300 group active:scale-[0.98] flex flex-col justify-center">
+                <i class="fas fa-file-signature text-3xl text-green-500 mb-4 group-hover:scale-110 transition-transform origin-left dark:drop-shadow-[0_0_10px_rgba(34,197,94,0.4)]"></i>
+                <h3 class="font-display text-xl md:text-2xl font-bold text-brand-deepBlue dark:text-white mb-2 transition-colors">Projeto Opcional</h3>
+                <p class="text-sm md:text-base text-gray-500 dark:text-gray-400">Nossa engenharia cuida da homologação na concessionária se você precisar.</p>
             </div>
-            <div class="reveal delay-400 bg-white dark:bg-slate-900 rounded-[2rem] p-8 shadow-sm dark:shadow-lg border border-gray-200/60 dark:border-white/5 hover:shadow-lg dark:hover:border-white/20 transition-all duration-300 group active:scale-[0.98]">
-                <i class="fas fa-mobile-alt text-3xl text-brand-orange mb-4 group-hover:scale-110 transition-transform origin-left dark:drop-shadow-[0_0_10px_rgba(255,107,0,0.4)]"></i>
-                <h3 class="font-display text-xl font-bold text-brand-deepBlue dark:text-white mb-2 transition-colors">Controle na Palma da Mão</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm">App em tempo real para ver quanto você está economizando por dia.</p>
+
+            <div class="reveal delay-400 bg-white dark:bg-slate-900 rounded-[2rem] p-8 shadow-sm dark:shadow-lg border border-gray-200/60 dark:border-white/5 hover:shadow-lg dark:hover:border-white/20 transition-all duration-300 group active:scale-[0.98] flex flex-col justify-center">
+                <i class="fas fa-tools text-3xl text-brand-orange mb-4 group-hover:scale-110 transition-transform origin-left dark:drop-shadow-[0_0_10px_rgba(255,107,0,0.4)]"></i>
+                <h3 class="font-display text-xl md:text-2xl font-bold text-brand-deepBlue dark:text-white mb-2 transition-colors">Liberdade Total</h3>
+                <p class="text-sm md:text-base text-gray-500 dark:text-gray-400">Receba o kit e contrate o instalador da sua confiança para a obra.</p>
             </div>
         </div>
     </div>
@@ -328,133 +584,56 @@
             <div class="max-w-2xl">
                 <span class="text-brand-orange font-bold text-xs tracking-[0.2em] uppercase mb-3 block">Nosso Portfólio</span>
                 <h2 class="font-display text-3xl md:text-4xl font-bold text-brand-deepBlue dark:text-white transition-colors">Quem já economiza com a Ágil</h2>
-                <p class="text-gray-500 dark:text-gray-400 mt-4 text-lg">Soluções personalizadas para residências, comércios e agronegócio.</p>
             </div>
-            <a href="https://instagram.com/agilsolar" target="_blank" class="hidden md:inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-brand-deepBlue dark:text-white font-bold hover:border-brand-orange hover:text-brand-orange dark:hover:bg-white dark:hover:text-brand-darkBg transition-all shadow-sm"><i class="fab fa-instagram"></i> Ver mais no Instagram</a>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
             <div class="reveal delay-100 group relative overflow-hidden rounded-3xl cursor-pointer shadow-lg transform transition-all active:scale-[0.98] border border-gray-100 dark:border-white/5">
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-deepBlue/90 dark:from-brand-darkBg via-transparent to-transparent z-10 opacity-90"></div>
                 <div class="w-full h-[400px] bg-gray-200 dark:bg-slate-800 overflow-hidden"><div class="w-full h-full bg-cover bg-center animate-ken-burns md:animate-none md:group-hover:scale-110 transition-transform duration-700 ease-out dark:opacity-80 dark:group-hover:opacity-100" style="background-image: url('https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');" loading="lazy"></div></div>
                 <div class="absolute bottom-0 left-0 p-8 z-20 text-white transform translate-y-0 md:translate-y-2 md:group-hover:translate-y-0 transition-transform duration-300">
                     <span class="bg-brand-orange text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block shadow-lg">Residencial</span>
                     <h3 class="font-display text-2xl font-bold mb-1">Matheus Ceará</h3>
-                    <p class="text-gray-300 text-sm mb-4 flex items-center gap-1"><i class="fas fa-map-marker-alt text-xs"></i> Araçatuba, SP</p>
                     <div class="flex items-center gap-3 text-sm font-semibold border-t border-white/20 pt-4 mt-2"><div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-yellow-400"><i class="fas fa-bolt"></i></div><div><p class="text-xs text-gray-400 uppercase">Economia estimada</p><span class="text-lg text-white">R$ 6.500/ano</span></div></div>
                 </div>
             </div>
             <div class="reveal delay-200 group relative overflow-hidden rounded-3xl cursor-pointer shadow-lg transform transition-all active:scale-[0.98] border border-gray-100 dark:border-white/5">
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-deepBlue/90 dark:from-brand-darkBg via-transparent to-transparent z-10 opacity-90"></div>
                 <div class="w-full h-[400px] bg-gray-200 dark:bg-slate-800 overflow-hidden"><div class="w-full h-full bg-cover bg-center animate-ken-burns md:animate-none md:group-hover:scale-110 transition-transform duration-700 ease-out dark:opacity-80 dark:group-hover:opacity-100" style="background-image: url('https://images.unsplash.com/photo-1624397640148-949b1732bb0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');" loading="lazy"></div></div>
                 <div class="absolute bottom-0 left-0 p-8 z-20 text-white transform translate-y-0 md:translate-y-2 md:group-hover:translate-y-0 transition-transform duration-300">
                     <span class="bg-blue-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block shadow-lg">Comercial</span>
                     <h3 class="font-display text-2xl font-bold mb-1">Panambianco Academia</h3>
-                    <p class="text-gray-300 text-sm mb-4 flex items-center gap-1"><i class="fas fa-map-marker-alt text-xs"></i> Araçatuba, SP</p>
-                    <div class="flex items-center gap-3 text-sm font-semibold border-t border-white/20 pt-4 mt-2"><div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-yellow-400"><i class="fas fa-bolt"></i></div><div><p class="text-xs text-gray-400 uppercase">Economia estimada</p><span class="text-lg text-white">R$ 42.000/ano</span></div></div>
                 </div>
             </div>
             <div class="reveal delay-300 group relative overflow-hidden rounded-3xl cursor-pointer shadow-lg transform transition-all active:scale-[0.98] border border-gray-100 dark:border-white/5">
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-deepBlue/90 dark:from-brand-darkBg via-transparent to-transparent z-10 opacity-90"></div>
                 <div class="w-full h-[400px] bg-gray-200 dark:bg-slate-800 overflow-hidden"><div class="w-full h-full bg-cover bg-center animate-ken-burns md:animate-none md:group-hover:scale-110 transition-transform duration-700 ease-out dark:opacity-80 dark:group-hover:opacity-100" style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');" loading="lazy"></div></div>
                 <div class="absolute bottom-0 left-0 p-8 z-20 text-white transform translate-y-0 md:translate-y-2 md:group-hover:translate-y-0 transition-transform duration-300">
                     <span class="bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block shadow-lg">Hospital</span>
                     <h3 class="font-display text-2xl font-bold mb-1">Santa Casa de Araçatuba</h3>
-                    <p class="text-gray-300 text-sm mb-4 flex items-center gap-1"><i class="fas fa-map-marker-alt text-xs"></i> Araçatuba, SP</p>
-                    <div class="flex items-center gap-3 text-sm font-semibold border-t border-white/20 pt-4 mt-2"><div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-yellow-400"><i class="fas fa-bolt"></i></div><div><p class="text-xs text-gray-400 uppercase">Economia estimada</p><span class="text-lg text-white">R$ 69.000/ano</span></div></div>
                 </div>
             </div>
-        </div>
-        <div class="mt-8 text-center md:hidden reveal">
-            <a href="https://instagram.com/agilsolar" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-brand-deepBlue dark:text-white font-bold hover:border-brand-orange hover:text-brand-orange dark:hover:bg-white dark:hover:text-brand-darkBg transition-all shadow-sm w-full active:scale-95"><i class="fab fa-instagram"></i> Ver mais no Instagram</a>
         </div>
     </div>
 </section>
 
 <section id="depoimentos" class="py-24 bg-brand-surface dark:bg-brand-darkBg relative overflow-hidden transition-colors duration-500">
     <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-radial from-brand-orange/5 dark:from-brand-orange/10 to-transparent opacity-70 pointer-events-none"></div>
-
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-12 reveal">
             <h2 class="font-display text-3xl md:text-4xl font-bold text-brand-deepBlue dark:text-white transition-colors">O que dizem nossos clientes</h2>
-            <div class="flex items-center justify-center gap-4 mt-6">
-                <div class="bg-white dark:bg-white/10 border border-gray-100 dark:border-white/5 text-brand-deepBlue dark:text-white px-4 py-2 rounded-xl shadow-sm flex items-center gap-2">
-                    <i class="fab fa-google text-red-500 text-xl"></i>
-                    <span class="font-display font-bold text-2xl">5.0</span>
-                    <div class="flex text-yellow-400 text-xs gap-0.5">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
         </div>
-
         <div id="testimonial-track" class="flex overflow-x-auto gap-6 pb-8 px-4 no-scrollbar cursor-grab active:cursor-grabbing">
-
             <div class="snap-center shrink-0 w-[350px] md:w-[400px] bg-white dark:bg-slate-900 p-8 rounded-3xl relative border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-lg transition-all">
                 <i class="fab fa-google text-2xl text-gray-200 dark:text-white/10 absolute top-8 right-8"></i>
                 <div class="flex items-center gap-4 mb-6">
                     <div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-brand-orange font-bold text-xl">C</div>
                     <div><h4 class="font-bold text-brand-deepBlue dark:text-white">Camila Sanablia</h4><p class="text-xs text-gray-500">Araçatuba, SP</p></div>
                 </div>
-                <div class="flex text-yellow-400 text-xs gap-0.5 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="text-gray-600 dark:text-gray-400 text-sm italic">"Empresa séria, extremamente correta e profissional. Atendimento personalizado, visando sempre a transparência. Indico essa empresa sem sombra de dúvidas."</p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm italic">"Empresa séria, extremamente correta e profissional. Atendimento personalizado. Indico essa empresa sem sombra de dúvidas."</p>
             </div>
-
             <div class="snap-center shrink-0 w-[350px] md:w-[400px] bg-white dark:bg-slate-900 p-8 rounded-3xl relative border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-lg transition-all">
-                <i class="fab fa-google text-2xl text-gray-200 dark:text-white/10 absolute top-8 right-8"></i>
-                <div class="flex items-center gap-4 mb-6">
-                    <img src="https://ui-avatars.com/api/?name=Gislaine+Mendes&background=FF6B00&color=fff" alt="User" class="w-12 h-12 rounded-full">
-                    <div><h4 class="font-bold text-brand-deepBlue dark:text-white">Gislaine Mendes</h4><p class="text-xs text-gray-500">Araçatuba, SP</p></div>
-                </div>
-                <div class="flex text-yellow-400 text-xs gap-0.5 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="text-gray-600 dark:text-gray-400 text-sm italic">"Só tenho elogios. Ágil e eficiente! Fui muito bem atendida o que me deixou super a vontade de fechar o negócio. Super Indico!"</p>
-            </div>
-
-            <div class="snap-center shrink-0 w-[350px] md:w-[400px] bg-white dark:bg-slate-900 p-8 rounded-3xl relative border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-lg transition-all">
-                <i class="fab fa-google text-2xl text-gray-200 dark:text-white/10 absolute top-8 right-8"></i>
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xl">G</div>
-                    <div><h4 class="font-bold text-brand-deepBlue dark:text-white">Glaucia Bento</h4><p class="text-xs text-gray-500">Birigui, SP</p></div>
-                </div>
-                <div class="flex text-yellow-400 text-xs gap-0.5 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="text-gray-600 dark:text-gray-400 text-sm italic">"Super recomendo. A instalação foi antes da programação, tive total suporte da Empresa em tudo. A equipe acompanha tudo de perto."</p>
-            </div>
-
-            <div class="snap-center shrink-0 w-[350px] md:w-[400px] bg-white dark:bg-slate-900 p-8 rounded-3xl relative border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-lg transition-all">
-                <i class="fab fa-google text-2xl text-gray-200 dark:text-white/10 absolute top-8 right-8"></i>
                 <div class="flex items-center gap-4 mb-6">
                     <img src="https://ui-avatars.com/api/?name=Ricardo+Souza&background=050A30&color=fff" alt="User" class="w-12 h-12 rounded-full">
                     <div><h4 class="font-bold text-brand-deepBlue dark:text-white">Ricardo Souza</h4><p class="text-xs text-gray-500">Guararapes, SP</p></div>
                 </div>
-                <div class="flex text-yellow-400 text-xs gap-0.5 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                 <p class="text-gray-600 dark:text-gray-400 text-sm italic">"Economia real logo no primeiro mês. O pós-venda da Ágil é o diferencial, me explicaram tudo sobre o aplicativo de monitoramento."</p>
-            </div>
-
-            <div class="snap-center shrink-0 w-[350px] md:w-[400px] bg-white dark:bg-slate-900 p-8 rounded-3xl relative border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-lg transition-all">
-                <i class="fab fa-google text-2xl text-gray-200 dark:text-white/10 absolute top-8 right-8"></i>
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold text-xl">F</div>
-                    <div><h4 class="font-bold text-brand-deepBlue dark:text-white">Fazenda Sta. Fé</h4><p class="text-xs text-gray-500">Rural</p></div>
-                </div>
-                <div class="flex text-yellow-400 text-xs gap-0.5 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="text-gray-600 dark:text-gray-400 text-sm italic">"Projeto rural complexo entregue com perfeição. A equipe de engenharia da Ágil entende muito do assunto."</p>
-            </div>
-
-        </div>
-
-        <div class="mt-24 border-t border-gray-200/60 dark:border-white/10 pt-20">
-            <div class="text-center mb-12 reveal">
-                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-500 text-xs font-bold uppercase tracking-wider border border-red-100 dark:border-red-500/20 mb-4 cursor-default"><i class="fab fa-youtube"></i> Histórias Reais</span>
-                <h3 class="font-display text-2xl md:text-3xl font-bold text-brand-deepBlue dark:text-white">Veja os resultados na prática</h3>
-            </div>
-            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                <div class="reveal delay-100 bg-white dark:bg-slate-900 p-4 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-white/5">
-                    <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gray-900 dark:bg-black shadow-inner"><iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/M-p3GdsyMNs?si=kWxQVm5ITlxCyQBC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
-                    <div class="p-4 text-center"><p class="font-bold text-brand-deepBlue dark:text-white text-lg">Padaria Guanabara - Araçatuba/SP</p></div>
-                </div>
-                <div class="reveal delay-200 bg-white dark:bg-slate-900 p-4 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-white/5">
-                    <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gray-900 dark:bg-black shadow-inner"><iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/Le3GAX7UBao?si=9RjX1rEuhfWdXATq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
-                    <div class="p-4 text-center"><p class="font-bold text-brand-deepBlue dark:text-white text-lg">Sítio Diego Brito</p></div>
-                </div>
             </div>
         </div>
     </div>
@@ -467,21 +646,19 @@
             <h2 class="font-display text-3xl md:text-4xl font-bold text-brand-deepBlue dark:text-white transition-colors">Perguntas Frequentes</h2>
         </div>
         <div class="space-y-4">
-            <div class="reveal delay-100 bg-gray-50 dark:bg-slate-900 rounded-2xl shadow-sm border border-transparent dark:border-white/5 overflow-hidden faq-item cursor-pointer hover:bg-white dark:hover:bg-slate-800 hover:border-gray-200 dark:hover:border-white/10 transition-colors active:scale-[0.99]" onclick="toggleFaq(this)">
-                <div class="p-6 flex justify-between items-center"><h4 class="font-bold text-brand-deepBlue dark:text-white text-lg transition-colors">Quanto custa instalar energia solar?</h4><i class="fas fa-chevron-down text-brand-orange faq-icon"></i></div>
-                <div class="faq-content px-6"><p class="pb-6 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">O investimento varia de acordo com o consumo da sua residência ou empresa. O retorno médio (payback) ocorre entre 2,5 a 4 anos. Após esse período, é praticamente lucro líquido por mais de 20 anos. Faça uma simulação gratuita no nosso formulário!</p></div>
+            <div class="reveal delay-100 bg-gray-50 dark:bg-slate-900 rounded-2xl shadow-sm border border-transparent dark:border-white/5 overflow-hidden faq-item cursor-pointer hover:bg-white transition-colors" onclick="toggleFaq(this)">
+                <div class="p-6 flex justify-between items-center"><h4 class="font-bold text-brand-deepBlue dark:text-white text-lg">A Ágil Solar faz a instalação?</h4><i class="fas fa-chevron-down text-brand-orange faq-icon"></i></div>
+                <div class="faq-content px-6"><p class="pb-6 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Não. Nós focamos em fornecer os melhores equipamentos com preços de distribuidora direto para você. A instalação elétrica e fixação no telhado ficam por conta do profissional/integrador de sua confiança.</p></div>
             </div>
-            <div class="reveal delay-200 bg-gray-50 dark:bg-slate-900 rounded-2xl shadow-sm border border-transparent dark:border-white/5 overflow-hidden faq-item cursor-pointer hover:bg-white dark:hover:bg-slate-800 hover:border-gray-200 dark:hover:border-white/10 transition-colors active:scale-[0.99]" onclick="toggleFaq(this)">
-                <div class="p-6 flex justify-between items-center"><h4 class="font-bold text-brand-deepBlue dark:text-white text-lg transition-colors">Funciona em dias nublados ou chuva?</h4><i class="fas fa-chevron-down text-brand-orange faq-icon"></i></div>
-                <div class="faq-content px-6"><p class="pb-6 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Sim! Os painéis funcionam com a radiação solar, não apenas com o sol direto. Embora a produção seja menor em dias muito fechados, o sistema continua gerando. Além disso, o que você gera a mais nos dias de sol vira crédito para usar à noite ou em dias nublados.</p></div>
+
+            <div class="reveal delay-200 bg-gray-50 dark:bg-slate-900 rounded-2xl shadow-sm border border-transparent dark:border-white/5 overflow-hidden faq-item cursor-pointer hover:bg-white transition-colors" onclick="toggleFaq(this)">
+                <div class="p-6 flex justify-between items-center"><h4 class="font-bold text-brand-deepBlue dark:text-white text-lg">E o projeto na concessionária (Homologação)?</h4><i class="fas fa-chevron-down text-brand-orange faq-icon"></i></div>
+                <div class="faq-content px-6"><p class="pb-6 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">A homologação é opcional! Se o seu instalador já fizer esse serviço, você compra apenas os equipamentos. Se precisar, nossa equipe de engenharia elabora e aprova o projeto na sua concessionária por um valor adicional pago à parte.</p></div>
             </div>
-            <div class="reveal delay-300 bg-gray-50 dark:bg-slate-900 rounded-2xl shadow-sm border border-transparent dark:border-white/5 overflow-hidden faq-item cursor-pointer hover:bg-white dark:hover:bg-slate-800 hover:border-gray-200 dark:hover:border-white/10 transition-colors active:scale-[0.99]" onclick="toggleFaq(this)">
-                <div class="p-6 flex justify-between items-center"><h4 class="font-bold text-brand-deepBlue dark:text-white text-lg transition-colors">Existe financiamento disponível?</h4><i class="fas fa-chevron-down text-brand-orange faq-icon"></i></div>
-                <div class="faq-content px-6"><p class="pb-6 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Com certeza! Hoje existem diversas linhas de crédito específicas para energia solar (como Santander, BV, Solfácil) com taxas atrativas. Na maioria dos casos, a parcela do financiamento fica muito próxima do valor que você já paga na conta de luz atual.</p></div>
-            </div>
-            <div class="reveal delay-400 bg-gray-50 dark:bg-slate-900 rounded-2xl shadow-sm border border-transparent dark:border-white/5 overflow-hidden faq-item cursor-pointer hover:bg-white dark:hover:bg-slate-800 hover:border-gray-200 dark:hover:border-white/10 transition-colors active:scale-[0.99]" onclick="toggleFaq(this)">
-                <div class="p-6 flex justify-between items-center"><h4 class="font-bold text-brand-deepBlue dark:text-white text-lg transition-colors">Preciso fazer manutenção constante?</h4><i class="fas fa-chevron-down text-brand-orange faq-icon"></i></div>
-                <div class="faq-content px-6"><p class="pb-6 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">A manutenção é mínima! Basicamente, recomenda-se uma limpeza dos painéis (com água e sabão neutro) a cada 6 meses ou 1 ano, dependendo da poeira da região, para garantir a eficiência máxima. A Ágil Solar também oferece planos de manutenção.</p></div>
+
+            <div class="reveal delay-300 bg-gray-50 dark:bg-slate-900 rounded-2xl shadow-sm border border-transparent dark:border-white/5 overflow-hidden faq-item cursor-pointer hover:bg-white transition-colors" onclick="toggleFaq(this)">
+                <div class="p-6 flex justify-between items-center"><h4 class="font-bold text-brand-deepBlue dark:text-white text-lg">O que vem incluso no kit?</h4><i class="fas fa-chevron-down text-brand-orange faq-icon"></i></div>
+                <div class="faq-content px-6"><p class="pb-6 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">O kit vai completo para a montagem: Módulos fotovoltaicos (placas), Inversores ou Microinversores, perfis e ganchos da estrutura de fixação, além da metragem padrão de cabos solares e conectores MC4.</p></div>
             </div>
         </div>
     </div>
@@ -504,29 +681,22 @@
             </div>
         </div>
         <div class="p-3 bg-white dark:bg-white/5 border-t border-gray-100 dark:border-white/10">
-            <!-- Normal Chat Input -->
             <form id="chat-form" onsubmit="handleChatSubmit(event)" class="flex gap-2">
                 <input type="text" id="chat-input" placeholder="Digite sua dúvida..." class="flex-1 bg-gray-100 dark:bg-black/20 border-0 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-orange/50 dark:text-white outline-none" autocomplete="off">
                 <button type="submit" class="w-12 h-12 bg-brand-orange hover:bg-orange-600 text-white rounded-xl flex items-center justify-center transition-colors shadow-lg shadow-orange-500/20 active:scale-95"><i class="fas fa-paper-plane"></i></button>
             </form>
-
-            <!-- Lead Capture Inputs (Hidden by default) -->
             <div id="chat-lead-form" class="hidden flex-col gap-2">
                 <input type="text" id="chat-name" placeholder="Seu nome" class="w-full bg-gray-100 dark:bg-black/20 border-0 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-orange/50 dark:text-white outline-none">
                 <input type="tel" id="chat-phone" placeholder="WhatsApp (com DDD)" class="w-full bg-gray-100 dark:bg-black/20 border-0 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-orange/50 dark:text-white outline-none">
                 <button onclick="submitLeadData()" class="w-full bg-brand-orange hover:bg-orange-600 text-white font-bold py-3 rounded-xl transition-all shadow-lg active:scale-95">Confirmar</button>
             </div>
-
             <div class="text-[10px] text-center text-gray-400 mt-2">Powered by Gemini AI ✨</div>
         </div>
     </div>
-
-    <!-- Tooltip Message -->
     <div id="chat-help-tooltip" class="pointer-events-auto absolute bottom-20 right-0 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-xl border border-brand-orange/20 text-sm font-bold text-brand-deepBlue dark:text-white whitespace-nowrap animate-bounce-subtle transition-all duration-500 opacity-100 translate-y-0">
         Precisa de ajuda?
         <div class="absolute -bottom-2 right-6 w-4 h-4 bg-white dark:bg-slate-800 transform rotate-45 border-b border-r border-brand-orange/20"></div>
     </div>
-
     <button id="chat-toggle-btn" onclick="toggleChat()" class="pointer-events-auto w-16 h-16 bg-brand-orange hover:bg-brand-deepBlue text-white rounded-full shadow-2xl shadow-brand-orange/40 hover:shadow-brand-deepBlue/40 transition-all duration-300 transform hover:-translate-y-1 active:scale-90 flex items-center justify-center text-2xl group relative">
         <i class="fas fa-comment-dots group-hover:scale-110 transition-transform"></i>
         <span class="absolute top-0 right-0 w-4 h-4 bg-red-500 rounded-full border-2 border-white dark:border-brand-darkBg animate-pulse"></span>
@@ -542,11 +712,9 @@
                 <p class="text-gray-400 max-w-sm leading-relaxed">Energia limpa para quem pensa no futuro e no bolso. Especialistas em projetos de alta performance.</p>
             </div>
             <div class="flex gap-4 reveal delay-200">
-                <!-- Instagram: Link real adicionado com target blank -->
                 <a href="https://instagram.com/agilsolar" target="_blank" class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-orange hover:border-brand-orange hover:text-white transition-all hover:-translate-y-1 group active:scale-95"><i class="fab fa-instagram text-xl group-hover:scale-110 transition-transform"></i></a>
-                <!-- Facebook: javascript:void(0) para não pular a página -->
                 <a href="javascript:void(0)" class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all hover:-translate-y-1 group active:scale-95"><i class="fab fa-facebook-f text-xl group-hover:scale-110 transition-transform"></i></a>
-                </div>
+            </div>
         </div>
         <div class="border-t border-gray-800 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 reveal delay-300">
             <div>&copy; 2026 Ágil Solar Franchising. Todos os direitos reservados.</div>
@@ -555,7 +723,7 @@
     </div>
 </footer>
 
-<div id="policy-modal" class="fixed inset-0 z-[10000] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+<div id="policy-modal" class="fixed inset-0 z-[10000] hidden">
     <div class="fixed inset-0 bg-brand-deepBlue/80 dark:bg-black/80 backdrop-blur-sm transition-opacity opacity-0" id="policy-backdrop"></div>
     <div class="fixed inset-0 z-10 overflow-y-auto">
         <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
@@ -564,52 +732,26 @@
                     <h3 class="text-xl font-bold text-brand-deepBlue dark:text-white"><i class="fas fa-shield-alt text-brand-orange mr-2"></i> Política de Privacidade</h3>
                     <button type="button" onclick="closePolicy()" class="text-gray-400 hover:text-gray-600 dark:hover:text-white transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-white/5"><i class="fas fa-times text-xl"></i></button>
                 </div>
+
                 <div class="px-8 py-8 max-h-[70vh] overflow-y-auto text-sm text-gray-600 dark:text-gray-300 leading-relaxed space-y-6 scroll-smooth">
-                    <p><strong>Última atualização:</strong> Janeiro de 2026</p>
+                    <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                        <h4 class="font-bold text-lg text-brand-deepBlue dark:text-white mb-2">1. Coleta de Dados</h4>
+                        <p>Coletamos as informações que você nos fornece diretamente, como nome, telefone e cidade, exclusivamente para realizar o dimensionamento preciso do seu kit solar e apresentar uma proposta comercial realista.</p>
 
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-brand-deepBlue dark:text-white text-base">1. Introdução</h4>
-                        <p>A Ágil Solar ("nós") preza pela transparência e segurança dos seus dados. Esta política explica como coletamos, usamos e protegemos suas informações, em conformidade com a Lei Geral de Proteção de Dados (LGPD).</p>
-                    </div>
+                        <h4 class="font-bold text-lg text-brand-deepBlue dark:text-white mb-2">2. Uso das Informações</h4>
+                        <p>Seus dados são utilizados por nossos especialistas para entrar em contato via WhatsApp ou telefone, enviar orçamentos detalhados e esclarecer dúvidas. <strong>Nós odiamos spam.</strong> Não vendemos, alugamos ou repassamos seus dados a terceiros não envolvidos na sua cotação.</p>
 
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-brand-deepBlue dark:text-white text-base">2. Quais dados coletamos?</h4>
-                        <p>Para gerar sua simulação e proposta comercial, podemos coletar:</p>
-                        <ul class="list-disc pl-5 space-y-1">
-                            <li><strong>Dados de Identificação:</strong> Nome, telefone (WhatsApp) e e-mail.</li>
-                            <li><strong>Dados de Consumo:</strong> Média de consumo de energia (kWh), valor da conta e concessionária local.</li>
-                            <li><strong>Dados Técnicos:</strong> Endereço IP e tipo de dispositivo para melhoria da experiência de navegação.</li>
-                        </ul>
-                    </div>
-
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-brand-deepBlue dark:text-white text-base">3. Como usamos seus dados?</h4>
-                        <p>Utilizamos suas informações exclusivamente para:</p>
-                        <ul class="list-disc pl-5 space-y-1">
-                            <li>Processar o dimensionamento do seu sistema solar;</li>
-                            <li>Enviar a proposta comercial solicitada;</li>
-                            <li>Entrar em contato para tirar dúvidas sobre o orçamento.</li>
-                        </ul>
-                        <p class="font-bold mt-2">Não vendemos seus dados para terceiros.</p>
-                    </div>
-
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-brand-deepBlue dark:text-white text-base">4. Armazenamento e Segurança</h4>
-                        <p>Seus dados são armazenados em servidores seguros e protegidos contra acessos não autorizados. Mantemos as informações pelo tempo necessário para cumprir a finalidade da proposta comercial ou conforme exigido por lei.</p>
-                    </div>
-
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-brand-deepBlue dark:text-white text-base">5. Seus Direitos</h4>
-                        <p>Você pode, a qualquer momento, solicitar a visualização, correção ou exclusão dos seus dados da nossa base. Para isso, basta entrar em contato através do nosso canal de atendimento.</p>
+                        <h4 class="font-bold text-lg text-brand-deepBlue dark:text-white mb-2">3. Segurança</h4>
+                        <p>Adotamos medidas rigorosas de segurança técnica e organizacional para proteger suas informações pessoais contra acesso não autorizado, perda ou alteração, em conformidade com a LGPD (Lei Geral de Proteção de Dados).</p>
                     </div>
                 </div>
+
                 <div class="bg-gray-50 dark:bg-slate-900 px-8 py-5 flex flex-row-reverse border-t border-gray-100 dark:border-white/10"><button type="button" onclick="closePolicy()" class="inline-flex w-full justify-center rounded-xl bg-brand-deepBlue dark:bg-brand-orange px-6 py-3 text-sm font-bold text-white shadow-lg hover:bg-gray-800 dark:hover:bg-orange-600 transition-all sm:w-auto">Entendi</button></div>
             </div>
         </div>
     </div>
 </div>
-
-<div id="terms-modal" class="fixed inset-0 z-[10000] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+<div id="terms-modal" class="fixed inset-0 z-[10000] hidden">
     <div class="fixed inset-0 bg-brand-deepBlue/80 dark:bg-black/80 backdrop-blur-sm transition-opacity opacity-0" id="terms-backdrop"></div>
     <div class="fixed inset-0 z-10 overflow-y-auto">
         <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
@@ -618,34 +760,20 @@
                     <h3 class="text-xl font-bold text-brand-deepBlue dark:text-white"><i class="fas fa-file-contract text-brand-orange mr-2"></i> Termos de Uso</h3>
                     <button type="button" onclick="closeTerms()" class="text-gray-400 hover:text-gray-600 dark:hover:text-white transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-white/5"><i class="fas fa-times text-xl"></i></button>
                 </div>
+
                 <div class="px-8 py-8 max-h-[70vh] overflow-y-auto text-sm text-gray-600 dark:text-gray-300 leading-relaxed space-y-6 scroll-smooth">
-                    <p><strong>Última atualização:</strong> Janeiro de 2026</p>
+                    <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                        <h4 class="font-bold text-lg text-brand-deepBlue dark:text-white mb-2">1. Natureza do Serviço</h4>
+                        <p>A Ágil Solar atua primariamente como fornecedora e distribuidora de equipamentos (Kits Fotovoltaicos). A contratação de profissionais, eletricistas ou integradores para a instalação física e execução da obra é de inteira e exclusiva responsabilidade do cliente.</p>
 
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-brand-deepBlue dark:text-white text-base">1. Aceitação dos Termos</h4>
-                        <p>Ao acessar e utilizar a ferramenta de simulação da Ágil Solar, você concorda integralmente com estes termos. Se não concordar com qualquer parte, por favor, não utilize nossos serviços.</p>
-                    </div>
+                        <h4 class="font-bold text-lg text-brand-deepBlue dark:text-white mb-2">2. Orçamentos e Estimativas</h4>
+                        <p>Os valores apresentados em nossa calculadora online são <strong>estimativas</strong> elaboradas com base em médias de mercado e radiação solar local. O preço final do kit pode sofrer alterações após a análise técnica detalhada e verificação de disponibilidade em nosso estoque. As propostas geradas têm validade de 48 horas.</p>
 
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-brand-deepBlue dark:text-white text-base">2. Natureza do Serviço</h4>
-                        <p>Nossa plataforma oferece uma ferramenta de estimativa para projetos de energia solar fotovoltaica. Os resultados apresentados (geração mensal, economia estimada e quantidade de painéis) são baseados em médias climatológicas e dados fornecidos pelo usuário. Eles constituem uma simulação preliminar e não garantem produção exata de energia, visto que fatores reais (sombreamento, inclinação, sujeira) influenciam o resultado final.</p>
-                    </div>
-
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-brand-deepBlue dark:text-white text-base">3. Uso de Dados</h4>
-                        <p>Você garante que as informações fornecidas (como consumo médio em kWh e localidade) são verdadeiras. A Ágil Solar não se responsabiliza por orçamentos imprecisos gerados a partir de dados incorretos inseridos pelo usuário.</p>
-                    </div>
-
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-brand-deepBlue dark:text-white text-base">4. Propriedade Intelectual</h4>
-                        <p>Todo o conteúdo, layout, código e a marca Ágil Solar são de nossa propriedade exclusiva. É proibida a cópia, reprodução ou engenharia reversa da nossa calculadora sem autorização prévia.</p>
-                    </div>
-
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-brand-deepBlue dark:text-white text-base">5. Alterações</h4>
-                        <p>Reservamo-nos o direito de alterar estes termos a qualquer momento para refletir mudanças na legislação ou em nossos serviços.</p>
+                        <h4 class="font-bold text-lg text-brand-deepBlue dark:text-white mb-2">3. Projeto de Engenharia (Homologação)</h4>
+                        <p>O serviço de projeto de engenharia, emissão de ART e homologação junto à concessionária de energia local é <strong>opcional</strong>. Caso o cliente não possua um engenheiro ou integrador próprio, este serviço pode ser contratado separadamente através da nossa equipe.</p>
                     </div>
                 </div>
+
                 <div class="bg-gray-50 dark:bg-slate-900 px-8 py-5 flex flex-row-reverse border-t border-gray-100 dark:border-white/10"><button type="button" onclick="closeTerms()" class="inline-flex w-full justify-center rounded-xl bg-brand-deepBlue dark:bg-brand-orange px-6 py-3 text-sm font-bold text-white shadow-lg hover:bg-gray-800 dark:hover:bg-orange-600 transition-all sm:w-auto">Li e Concordo</button></div>
             </div>
         </div>
@@ -661,7 +789,56 @@
     </div>
 </div>
 
-<script src="assets/js/script.js"></script>
+<div id="bill-info-modal" class="fixed inset-0 z-[20000] hidden flex items-center justify-center p-4">
+    <div class="fixed inset-0 bg-brand-deepBlue/80 dark:bg-black/80 backdrop-blur-sm transition-opacity opacity-0" id="bill-info-backdrop" onclick="closeBillInfoModal()"></div>
+    <div class="bg-white dark:bg-slate-900 rounded-3xl w-full max-w-md relative z-10 transform scale-95 opacity-0 transition-all duration-300 shadow-2xl overflow-hidden border border-gray-100 dark:border-white/10" id="bill-info-panel">
+        <button onclick="closeBillInfoModal()" class="absolute top-4 right-4 w-8 h-8 bg-gray-100 dark:bg-white/10 rounded-full flex items-center justify-center text-gray-500 hover:text-brand-orange z-20"><i class="fas fa-times"></i></button>
+        <div class="p-6 md:p-8">
+            <div class="w-12 h-12 bg-orange-100 dark:bg-brand-orange/20 text-brand-orange rounded-full flex items-center justify-center text-xl mb-4"><i class="fas fa-file-invoice-dollar"></i></div>
+            <h3 class="font-display font-bold text-2xl text-brand-deepBlue dark:text-white mb-3">Como fazer a média mensal?</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                Pegue uma conta de luz recente e procure pelo quadro "Histórico de Consumo".<br><br>
+                1. Some os valores (em kWh) dos últimos 12 meses.<br><br>
+                2. Divida o total por 12.<br><br>
+                <strong>Dica:</strong> Algumas contas já trazem a "Média de Consumo" pronta nesse mesmo quadro.
+            </p>
+            <button onclick="closeBillInfoModal()" class="w-full bg-brand-deepBlue dark:bg-white text-white dark:text-brand-darkBg font-bold py-3 rounded-xl hover:shadow-lg transition-all active:scale-95">Entendi</button>
+        </div>
+    </div>
+</div>
+
+<div id="product-modal" class="fixed inset-0 z-[20000] hidden flex items-center justify-center p-4">
+    <div class="fixed inset-0 bg-brand-deepBlue/80 dark:bg-black/80 backdrop-blur-sm transition-opacity opacity-0" id="product-backdrop" onclick="closeProductModal()"></div>
+
+    <div class="bg-white dark:bg-slate-900 rounded-3xl w-full max-w-md md:max-w-2xl relative z-10 transform scale-95 opacity-0 transition-all duration-300 shadow-2xl overflow-hidden border border-gray-100 dark:border-white/10 flex flex-col md:flex-row" id="product-panel">
+
+        <button onclick="closeProductModal()" class="absolute top-4 right-4 w-8 h-8 bg-gray-100 dark:bg-white/10 rounded-full flex items-center justify-center text-gray-500 hover:text-brand-orange z-30 transition-colors"><i class="fas fa-times"></i></button>
+
+        <div class="h-56 md:h-auto md:w-1/2 bg-gray-100 dark:bg-slate-800 relative shrink-0">
+            <img id="modal-img" src="" alt="Produto" class="w-full h-full object-cover">
+            <div id="modal-badge-container" class="absolute bottom-3 left-3 hidden">
+                <span class="bg-gold-gradient text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1 shadow-lg"><i class="fas fa-fire"></i> Custo Benefício</span>
+            </div>
+        </div>
+
+        <div class="p-6 md:p-8 md:w-1/2 flex flex-col justify-center relative">
+            <div>
+                <p id="modal-brand" class="text-brand-orange font-bold text-xs uppercase tracking-wider mb-1">Marca</p>
+                <h3 id="modal-title" class="font-display font-bold text-2xl text-brand-deepBlue dark:text-white mb-3 leading-tight">Nome do Produto</h3>
+                <p id="modal-desc" class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Descrição detalhada do produto e seus benefícios na geração de energia.</p>
+            </div>
+
+            <div class="mt-6 md:mt-8">
+                <div id="modal-datasheet-container" class="mb-3 hidden"></div>
+                <div class="mt-4">
+                    <button onclick="closeProductModal()" class="w-full bg-brand-deepBlue dark:bg-white text-white dark:text-brand-darkBg font-bold py-3 rounded-xl hover:opacity-90 transition-opacity shadow-lg">Entendi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/script.js?v=2"></script>
 
 </body>
 </html>
